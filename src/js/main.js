@@ -7,7 +7,7 @@ tg.expand()
 buy.addEventListener("click", () => {
     document.getElementById("main").style.display = "none"
     document.getElementById("form").style.display = "block"
-    document.getElementById("address").value = "Petrick"
+    document.getElementById("address").value = "Petrick1"
 });
 
 order.addEventListener("click", () => {
