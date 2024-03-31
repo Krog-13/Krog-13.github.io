@@ -11,7 +11,9 @@ buy.addEventListener("click", () => {
 });
 
 order.addEventListener("click", () => {
-    let address = document.getElementById("address")
+    console.log("testest")
+    let address = document.getElementById("address").value
+    console.log(address)
     let data = {
         address: address
     }
