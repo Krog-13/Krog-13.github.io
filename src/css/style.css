@@ -33,6 +33,7 @@ button {
     font-weight: 500;
     cursor: pointer;
     transition: all 500ms ease;
+    background-color: antiquewhite;
 
 }
 
