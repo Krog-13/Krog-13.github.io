@@ -1,11 +1,15 @@
 
 let tg = window.Telegram.WebApp;
-let bay = document.getElementById("send")
-let username = document.getElementById("user_name")
+let buy = document.getElementById("buy")
+let order = document.getElementById("order")
 
 
-console.log(username.value)
-bay.addEventListener("click", () => {
+buy.addEventListener("click", () => {
+    document.getElementById("main").style.display = "none"
     document.getElementById("form").style.display = "block"
-    console.log("test")
+    document.getElementById("address").value = tg.initDataUnsafe.first_name
+});
+
+order.addEventListener("click", () => {
+    tg.close()
 })
