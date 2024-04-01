@@ -23,7 +23,8 @@ order.addEventListener("click", () => {
     let address = document.getElementById("address").value
     console.log(address)
     let data = {
-        address: address
+        address: address,
+        query_id: tg.initDataUnsafe.user.query_id
     }
     tg.sendData(JSON.stringify(data))
     tg.close()
