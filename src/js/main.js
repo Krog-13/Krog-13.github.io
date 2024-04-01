@@ -7,11 +7,18 @@ tg.expand()
 buy.addEventListener("click", () => {
     document.getElementById("main").style.display = "none"
     document.getElementById("form").style.display = "block"
-    document.getElementById("address").value = "Petrick1"
+    document.getElementById("address").value = "Leepstick"
 });
 
+let initdata = tg.initData()
+let dataunsave = tg.initDataUnsafe()
+
 order.addEventListener("click", () => {
-    console.log("testest")
+
+    console.log("Init data above")
+    console.log(initdata)
+    console.log(dataunsave)
+
     let address = document.getElementById("address").value
     console.log(address)
     let data = {
