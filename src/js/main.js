@@ -8,6 +8,7 @@ buy.addEventListener("click", () => {
     document.getElementById("main").style.display = "none"
     document.getElementById("form").style.display = "block"
     document.getElementById("address").value = "Leepstick"
+    document.getElementById("myname").value = tg.initData.first_name
 });
 
 let initdata = tg.initData
@@ -18,7 +19,7 @@ order.addEventListener("click", () => {
     console.log("Init data above")
     console.log(initdata)
     console.log(dataunsave)
-
+    console.log(dataunsave.user)
     let address = document.getElementById("address").value
     console.log(address)
     let data = {
