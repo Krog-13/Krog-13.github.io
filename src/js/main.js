@@ -10,8 +10,8 @@ buy.addEventListener("click", () => {
     document.getElementById("address").value = "Leepstick"
 });
 
-let initdata = tg.initData()
-let dataunsave = tg.initDataUnsafe()
+let initdata = tg.initData
+let dataunsave = tg.initDataUnsafe
 
 order.addEventListener("click", () => {
 
