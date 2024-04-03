@@ -21,10 +21,14 @@ order.addEventListener("click", () => {
     console.log(dataunsave)
     console.log(dataunsave.user)
     let address = document.getElementById("address").value
+    let price = document.getElementById("price").value
+    let code = document.getElementById("code").value
     console.log(address)
     let data = {
         address: address,
-        query_id: tg.initDataUnsafe.query_id
+        query_id: tg.initDataUnsafe.query_id,
+        price: price,
+        code: code
     }
     tg.sendData(JSON.stringify(data))
     tg.close()
