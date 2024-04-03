@@ -8,7 +8,7 @@ buy.addEventListener("click", () => {
     document.getElementById("main").style.display = "none"
     document.getElementById("form").style.display = "block"
     document.getElementById("address").value = "Leepstick"
-    document.getElementById("myname").value = "tg.initDataUnsafe.user.first_name"
+    document.getElementById("myname").value = "Test"
 });
 
 let initdata = tg.initData
