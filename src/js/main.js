@@ -1,36 +1,36 @@
 const config = [
     {
-        productID: 101,
+        modelID: 101,
         name: "Egor",
         price: 300,
         image_src: "src/images/pic0.jpg"
     },
     {
-        productID: 102,
+        modelID: 102,
         name: "Ulyana",
         price: 1_000,
         image_src: "src/images/pic1.jpg"
     },
     {
-        productID: 103,
+        modelID: 103,
         name: "Новогодняя Мегумин!",
         price: 150_000,
         image_src: "src/images/pic2.jpg"
     },
     {
-        productID: 104,
+        modelID: 104,
         name: "Андроид!",
         price: 100,
         image_src: "src/images/pic5.jpg"
     },
     {
-        productID: 105,
+        modelID: 105,
         name: "Лекции по физике",
         price: 20,
         image_src: "src/images/pic4.jpg"
     },
     {
-        productID: 106,
+        modelID: 106,
         name: "Забыл что тут должно быть",
         price: 1_234,
         image_src: "src/images/pic3.jpg"
@@ -93,9 +93,9 @@ for (let i = 0; i < config.length; i++) {
     const item = config[i];
     console.log(`Name: ${item.name}, Price: ${item.price}`);
 
-    map[item.productID] = i;
+    map[item.modelID] = i;
     cart.push({
-        productID: item.productID,
+        modelID: item.modelID,
         quantity: 0
     });
 
@@ -107,31 +107,31 @@ for (let i = 0; i < config.length; i++) {
         <span> ${item.price} тг </span>
         <p style="vertical-align: bottom;">
             
-            В Корзине: <span id="quantity-${item.productID}"> 0 </span> 
+            В Корзине: <span id="quantity-${item.modelID}"> 0 </span> 
             
         </p>
-        <button class="removeButton" data-id="${item.productID}"> - </button> 
-        <button class="addButton" data-id="${item.productID}"> + </button>
+        <button class="removeButton" data-id="${item.modelID}"> - </button> 
+        <button class="addButton" data-id="${item.modelID}"> + </button>
     `;
 
     let removeButton = itemDiv.querySelector('.removeButton');
     let addButton = itemDiv.querySelector('.addButton');
 
     addButton.addEventListener('click', function(){
-        const productId = this.getAttribute('data-id');
-        const index = map[productId];
+        const modelID = this.getAttribute('data-id');
+        const index = map[modelID];
         cart[index].quantity++;
-        document.getElementById(`quantity-${productId}`).innerText = cart[index].quantity;
+        document.getElementById(`quantity-${modelID}`).innerText = cart[index].quantity;
         updateCartTotal(item.price);
         UpdateCartTable()
     });
 
     removeButton.addEventListener('click', function(){
-        const productId = this.getAttribute('data-id');
-        const index = map[productId];
+        const modelID = this.getAttribute('data-id');
+        const index = map[modelID];
         if (cart[index].quantity > 0) {
             cart[index].quantity--;
-            document.getElementById(`quantity-${productId}`).innerText = cart[index].quantity;
+            document.getElementById(`quantity-${modelID}`).innerText = cart[index].quantity;
             updateCartTotal(-item.price);
             UpdateCartTable()
         }
@@ -185,14 +185,14 @@ cartButton.addEventListener("click", function(){
 
     test_data = {"data": [{"modelID": 6, "quantity": 3}, {"modelID": 8, "quantity": 1}]}
 
-    tg.sendData(JSON.stringify(test_data))
+    tg.sendData(JSON.stringify(data))
     tg.close()
     
     /*
     document.getElementById("shop").style.display = 'none';
 
     cart.forEach(cartItem => {
-        const product = config.find(product => product.productID === cartItem.productID);
+        const product = config.find(product => product.modelID === cartItem.modelID);
         const itemDiv = document.createElement('div');
         itemDiv.className = 'cartItem';
         itemDiv.innerHTML = `
@@ -212,7 +212,7 @@ function UpdateCartTable(){
     cartContent.innerHTML = "";
 
     cart.forEach(cartItem => {
-        const product = config.find(product => product.productID === cartItem.productID);
+        const product = config.find(product => product.modelID === cartItem.modelID);
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>${product.name}</td>
@@ -224,7 +224,7 @@ function UpdateCartTable(){
     });
 
     const cartTotal = cart.reduce((total, cartItem) => {
-        const product = config.find(product => product.productID === cartItem.productID);
+        const product = config.find(product => product.modelID === cartItem.modelID);
         return total + (product.price * cartItem.quantity);
     }, 0);
     document.getElementById('cartTotal').textContent = cartTotal + ' тг';
