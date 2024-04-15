@@ -1,39 +1,27 @@
 const config = [
     {
-        modelID: 101,
-        name: "Egor",
+        modelID: 6,
+        name: "Ihpne 11",
         price: 300,
-        image_src: "src/images/pic0.jpg"
+        image_src: "src/images/iphone11.jpg"
     },
     {
-        modelID: 102,
-        name: "Ulyana",
+        modelID: 7,
+        name: "iphone 13",
         price: 1_000,
-        image_src: "src/images/pic1.jpg"
+        image_src: "src/images/iphone13.jpg"
     },
     {
-        modelID: 103,
-        name: "Новогодняя Мегумин!",
+        modelID: 8,
+        name: "mouse optical",
         price: 150_000,
-        image_src: "src/images/pic2.jpg"
+        image_src: "src/images/optical.jpg"
     },
     {
-        modelID: 104,
-        name: "Андроид!",
+        modelID: 9,
+        name: "mause laser",
         price: 100,
-        image_src: "src/images/pic5.jpg"
-    },
-    {
-        modelID: 105,
-        name: "Лекции по физике",
-        price: 20,
-        image_src: "src/images/pic4.jpg"
-    },
-    {
-        modelID: 106,
-        name: "Забыл что тут должно быть",
-        price: 1_234,
-        image_src: "src/images/pic3.jpg"
+        image_src: "src/images/laser.jpg"
     }
     
 ];
