@@ -7,7 +7,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 200;
-    color: var(--tg-theme-text-color);
+    color: var(--tg-them-text-color);
     background: var(--tg-theme-bg-color);
 }
 
@@ -17,29 +17,10 @@ body {
     text-align: center;
 }
 
-#form {
-    display: none;
-    text-align: center;
-}
-
 h1 {
     margin-top: 50px;
     margin-bottom: 10px;
     color: bisque;
-}
-
-input {
-    width: 20%;
-    outline: none;
-    margin: 10px 5px;
-    padding: 15px 10px;
-    font-size: 14px;
-    border: 2px solid silver;
-    border-radius: 5px;
-}
-
-input:focus {
-    border-color: #db5d5d;
 }
 
 button {
@@ -53,10 +34,9 @@ button {
     cursor: pointer;
     transition: all 500ms ease;
     color: var(--tg-theme-button-color);
-    background-color: var(--tg-theme-button-text-color);
-    background-color: antiquewhite;
+    background: var(--tg-theme-button-text-color);
 }
 
 button:hover {
-    background: none;
+    background: var(--tg-theme-secondary-bg-color);
 }

@@ -4,24 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/shop.css">
+    <link rel="stylesheet" href="src/css/cart.css">
     <title>Test aiogram bot</title>
 </head>
 <body>
     <div id="main">
-        <h1>Online shop</h1>
+        <h1>Iris shop</h1>
         <hr>
         <img src="src/images/lepp.jpg" alt="dior" width="500"><br>
-        <button id="buy">Buy</button>
     </div>
-    <input type="text" placeholder="address" id="myname"><br>
+    <h4>test</h4>
+    <button id="update">UPDATE</button>
+    <div id = "shop">
+        <h1> Каталог товаров </h1>
+        <div class="catalogue">
+            <!--
+            <div class="item" onclick="alert(0)"> 
+                <img src="src/images/pic0.jpg">
+                <p>описание</p>
+                <span> 100$ </span>
+                butt
+            </div>
+            <div class="item" onclick="alert(1)"> 
+                <img src="src/images/pic1.jpg">
+                <p>описание</p>
+                <span> 50$ </span>
+                
+                <p><button> - </button> В Корзине: <span> 0 </span> <button> + </button></p>
+
+            </div>
+            
+            <div class="item" onclick="alert(2)"> 
+                <img src="src/images/pic2.jpg">
+                <p>описание</p>
+                <span> 70$ </span>
+            </div>
+            <div class="item" onclick="alert(3)"> 
+                <img src="src/images/pic3.jpg">
+                <p>описание</p>
+                <span> 800$ </span>
+            </div>  
+            <div class="item" onclick="alert(4)"> 
+                <img src="src/images/pic4.jpg">
+                <p>описание</p>
+                <span> 99$ </span>
+            </div>
+            -->
+        </div>
+        
+        <!-- <button id="buy">Buy</button> -->
+        <!-- <script src="src/js/shop.js"></script> -->
+    </div>
+    <button class="cartButton"> Корзина: <span id="cartSum">0</span> тг {временно: оформить заказ}</button>
+    <!-- <input type="text" placeholder="address" id="myname"><br> -->
     <form id="form">
         <input type="text" placeholder="address" id="address" value="Astana"><br>
         <input type="number" placeholder="count product" id="price"><br>
         <input type="text" disabled value="405" id="code">
         <button id="order">Submit</button>
     </form>
+
+    <table id="cartContent">
+        <thead>
+            <tr>
+                <th>Название</th>
+                <th>Цена</th>
+                <th>Количество</th>
+                <th>Итог</th> <!-- Новая колонка -->
+            </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" style="text-align: right;"><strong>Итог:</strong></td>
+                <td id="cartTotal"></td>
+            </tr>
+        </tfoot>
+    </table>
+
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script src="src/js/main.js"></script>
+    <!-- <script src="src/js/fill_catalogue.js"></script> -->
+    <br/>
+    <br/>
+    <br/>
 </body>
 </html>
