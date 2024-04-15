@@ -2,25 +2,25 @@ const config = [
     {
         modelID: 6,
         name: "Ihpne 11",
-        price: 300,
+        price: 10000,
         image_src: "src/images/iphone11.jpg"
     },
     {
         modelID: 7,
         name: "iphone 13",
-        price: 1_000,
+        price: 12000,
         image_src: "src/images/iphone13.jpg"
     },
     {
         modelID: 8,
         name: "mouse optical",
-        price: 150_000,
+        price: 8000,
         image_src: "src/images/optical.jpg"
     },
     {
         modelID: 9,
         name: "mause laser",
-        price: 100,
+        price: 5000,
         image_src: "src/images/laser.jpg"
     }
     
