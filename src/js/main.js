@@ -1,27 +1,15 @@
 const config = [
     {
-        modelID: 6,
+        modelID: 1,
         name: "Ihpne 11",
         price: 10000,
         image_src: "src/images/iphone11.jpg"
     },
     {
-        modelID: 7,
-        name: "iphone 13",
-        price: 12000,
-        image_src: "src/images/iphone13.jpg"
-    },
-    {
-        modelID: 8,
+        modelID: 2,
         name: "mouse optical",
         price: 8000,
         image_src: "src/images/optical.jpg"
-    },
-    {
-        modelID: 9,
-        name: "mause laser",
-        price: 5000,
-        image_src: "src/images/laser.jpg"
     }
     
 ];
@@ -171,9 +159,11 @@ cartButton.addEventListener("click", function(){
     data = cart; 
     console.log(data);
 
-    test_data = {"data": [{"modelID": 6, "quantity": 3}, {"modelID": 8, "quantity": 1}]}
+    test_data = {"data": [{"modelID": 6, "quantity": 3}, {"modelID": 8, "quantity": 1}],
+                "address": {"username":"Krog", "phone":"874720284373", "city": "astana", "post_index": "00001",
+            "address": "st. Byqar ZHiray apt 45", "comment": "Don not work homephone", "deliver": true}}
 
-    tg.sendData(JSON.stringify(data))
+    tg.sendData(JSON.stringify(test_data))
     tg.close()
     
     /*
