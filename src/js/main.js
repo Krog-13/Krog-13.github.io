@@ -159,7 +159,7 @@ cartButton.addEventListener("click", function(){
     data = cart; 
     console.log(data);
 
-    test_data = {"data": [{"modelID": 6, "quantity": 3}, {"modelID": 8, "quantity": 1}],
+    test_data = {"data": [{"modelID": 1, "quantity": 1}, {"modelID": 2, "quantity": 2}],
                 "address": {"username":"Krog", "phone":"874720284373", "city": "astana", "post_index": "00001",
             "address": "st. Byqar ZHiray apt 45", "comment": "Don not work homephone", "deliver": true}}
 
